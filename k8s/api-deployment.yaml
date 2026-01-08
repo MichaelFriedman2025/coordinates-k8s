@@ -20,15 +20,15 @@ spec:
         ports:
         - containerPort: 8000
         env:
-        - name: "POSTGRES_HOST"
-          value: "postgres-svc"
-        - name: "POSTGRES_PORT"
+        - name: POSTGRES_HOST
+          value: "postgres-0.postgres-svc"
+        - name: POSTGRES_PORT
           value: "5432"
-        - name: "POSTGRES_DB"
+        - name: POSTGRES_DB
           value: "coordinates_db"
-        - name: "POSTGRES_USER"
+        - name: POSTGRES_USER
           value: "postgres"
-        - name: "POSTGRES_PASSWORD"
+        - name: POSTGRES_PASSWORD
           value: "postgres"
  
  

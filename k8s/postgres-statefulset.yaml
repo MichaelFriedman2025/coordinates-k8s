@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: postgres
-  serviceName: "postgres-svc"
+  serviceName: postgres-svc
   replicas: 3
   template:
     metadata:
@@ -20,12 +20,12 @@ spec:
         - containerPort: 5432
           name: postgres
         env: 
-        - name: "POSTGRES_DB"
+        - name: POSTGRES_DB
           value: "coordinates_db"
-        - name: "POSTGRES_USER"
+        - name: POSTGRES_USER
           value: "postgres"
-        - name: "POSTGRES_PASSWORD"
-          value: postgres
+        - name: POSTGRES_PASSWORD
+          value: "postgres"
         volumeMounts:
         - name: postgres-storage
           mountPath:  /var/lib/postgresql/data
